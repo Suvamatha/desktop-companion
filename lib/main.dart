@@ -111,7 +111,6 @@ class CompanionBody extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // Status dot — will reflect character state in Phase 2
           Container(
             width: 8,
             height: 8,
