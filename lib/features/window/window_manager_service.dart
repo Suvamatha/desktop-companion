@@ -10,10 +10,6 @@ class WindowManagerService {
 
   Future<void> initialize() async {
     await windowManager.ensureInitialized();
-
-    // NOTE: removed `position:` from WindowOptions — newer window_manager
-    // versions handle position separately via setPosition(). Safer to
-    // create the window first, THEN move it.
     final WindowOptions options = WindowOptions(
       size: const Size(AppConstants.windowWidth, AppConstants.windowHeight),
       minimumSize: const Size(AppConstants.windowMinWidth, AppConstants.windowMinHeight),

@@ -42,8 +42,6 @@ class DesktopCompanionApp extends StatelessWidget {
   }
 }
 
-/// CompanionShell is the outermost container — the "window frame" of our app.
-/// It's transparent with a visual border to look like a floating widget.
 class CompanionShell extends StatelessWidget {
   const CompanionShell({super.key});
 
@@ -79,8 +77,6 @@ class CompanionShell extends StatelessWidget {
   }
 }
 
-/// The main content area of our companion.
-/// In Phase 2, the character goes here. For now, it's a placeholder.
 class CompanionBody extends StatelessWidget {
   const CompanionBody({super.key});
 
@@ -88,10 +84,8 @@ class CompanionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // ── Top Bar ──────────────────────────────
         _buildTopBar(context),
 
-        // ── Character Area (placeholder for Phase 2) ──
         Expanded(
           flex: 3,
           child: _buildCharacterPlaceholder(),
