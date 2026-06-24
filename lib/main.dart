@@ -91,7 +91,6 @@ class CompanionBody extends StatelessWidget {
           child: _buildCharacterPlaceholder(),
         ),
 
-        // ── Stats Panel (placeholder for Phase 3) ──
         Expanded(
           flex: 2,
           child: _buildStatsPlaceholder(context),
