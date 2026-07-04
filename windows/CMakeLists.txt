@@ -57,6 +57,10 @@ add_subdirectory("runner")
 # them to the application.
 include(flutter/generated_plugins.cmake)
 
+if(TARGET rive_common_plugin)
+  target_compile_options(rive_common_plugin PRIVATE /clang:-Wno-nontrivial-memcall)
+endif()
+
 
 # === Installation ===
 # Support files are copied into place next to the executable, so that it can

@@ -10,7 +10,7 @@ class WindowManagerService {
 
   Future<void> initialize() async {
     await windowManager.ensureInitialized();
-    final WindowOptions options = WindowOptions(
+    const WindowOptions options = WindowOptions(
       size: const Size(AppConstants.windowWidth, AppConstants.windowHeight),
       minimumSize: const Size(AppConstants.windowMinWidth, AppConstants.windowMinHeight),
       backgroundColor: Colors.transparent,

@@ -1,6 +1,6 @@
 name: desktop_companion
 description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -16,7 +16,7 @@ dependencies:
   screen_retriever: ^0.1.9
 
   # Animation
-  rive: ^0.13.7
+  rive: ^0.13.15
   lottie: ^3.1.2
 
   # System tray
@@ -41,6 +41,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^3.0.0
   hive_generator: ^2.0.1
   build_runner: ^2.4.9

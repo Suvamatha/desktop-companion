@@ -17,15 +17,7 @@ Future<void> main() async {
   final windowService = WindowManagerService();
   await windowService.initialize();
 
-  runApp(
-    MultiProvider(
-      providers: [
-        // We'll add Providers here in future phases
-        // For now, just the window service is enough
-      ],
-      child: const DesktopCompanionApp(),
-    ),
-  );
+  runApp(const DesktopCompanionApp());
 }
 
 class DesktopCompanionApp extends StatelessWidget {
@@ -61,7 +53,7 @@ class CompanionShell extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.primaryColor.withOpacity(0.15),
+                color: AppTheme.primaryColor.withValues(alpha: 0.15),
                 blurRadius: 30,
                 spreadRadius: 5,
               ),
@@ -104,8 +96,8 @@ class CompanionBody extends StatelessWidget {
       height: 48,
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        color: AppTheme.surfaceColor.withOpacity(0.6),
-        border: Border(
+        color: AppTheme.surfaceColor.withValues(alpha: 0.6),
+        border: const Border(
           bottom: BorderSide(color: AppTheme.glassBorder, width: 1),
         ),
       ),
@@ -132,7 +124,7 @@ class CompanionBody extends StatelessWidget {
           // Minimize button
           IconButton(
             icon: const Icon(Icons.remove_rounded, size: 18),
-            color: AppTheme.onSurface.withOpacity(0.6),
+            color: AppTheme.onSurface.withValues(alpha: 0.6),
             onPressed: () => WindowManagerService().hide(),
             tooltip: 'Minimize to tray',
             padding: EdgeInsets.zero,
@@ -147,7 +139,7 @@ class CompanionBody extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.surfaceVariant.withOpacity(0.5),
+        color: AppTheme.surfaceVariant.withValues(alpha: 0.5),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: AppTheme.glassBorder),
       ),
@@ -176,7 +168,7 @@ class CompanionBody extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.surfaceVariant.withOpacity(0.5),
+        color: AppTheme.surfaceVariant.withValues(alpha: 0.5),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: AppTheme.glassBorder),
       ),
